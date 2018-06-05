@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <meta charset="utf-8">
+        <meta content="width=device-width,initial-scale=1.0" name="viewport">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/Pizza_project.css">
+		<title>Amore Pizza</title> 
+	</head>
+	<body>
+        <!--Jumbo heading-->
+        <div class="container">
+            <div class="jumbotron ">
+                <div class="container">
+                <h1 class="display-4">Amore Pizza</h1>
+                </div>
+            </div>
+       </div>
+        <!--/Jumbo heading-->
+		<!--Menu-->
+        <div class="container">  
+        
+        <div id="menuBG">
+                
+                
+                <form id="frmMenu">
+                    <div class="menu">
+                        <h3>Size:</h3>
+                        <input class="size" type="radio" name="Size" value="Personal Pizza"> Personal Pizza<br>
+                        <input class="size" type="radio" name="Size" value="Medium Pizza"> Medium Pizza<br>
+                        <input class="size" type="radio" name="Size" value="Large Pizza" checked> Large Pizza<br>
+                        <input class="size" type="radio" name="Size" value="Extra Large Pizza"> Extra Large Pizza<br>
+                    </div>
+                    <div class="menu">
+                        <h3>Pick your meats!:</h3>
+                           <input class="meats" type="checkbox" name="Meat" value="Pepperoni">Pepperoni<br> 
+                           <input class="meats" type="checkbox" name="Meat" value="Sausage">Sausage<br>
+                           <input class="meats" type="checkbox" name="Meat" value="Canadian Bacon">Canadian Bacon<br>
+                           <input class="meats" type="checkbox" name="Meat" value="Ground Beef">Ground Beef<br>
+                           <input class="meats" type="checkbox" name="Meat" value="Anchovies">Anchovies<br>
+                           <input class="meats" type="checkbox" name="Meat" value="Chicken">Chicken<br>
+                    </div>
+                    <div class="menu">
+                        <h3>Pick your veggies!:</h3>
+                       <input class="veggies" type="checkbox" name="veggie" value="Tomatoes">Tomatoes<br> 
+                       <input class="veggies" type="checkbox" name="veggie" value="Onions">Onions<br>
+                       <input class="veggies" type="checkbox" name="veggie" value="Olives">Olives<br>
+                       <input class="veggies" type="checkbox" name="veggie" value="Green Peppers">Green Peppers<br>
+                       <input class="veggies" type="checkbox" name="veggie" value="Mushrooms">Mushrooms<br>
+                       <input class="veggies" type="checkbox" name="veggie" value="Pineapple">Pineapple<br>
+                       <input class="veggies" type="checkbox" name="veggie" value="Spinach">Spinach<br>
+                       <input class="veggies" type="checkbox" name="veggie" value="Jalapeno">Jalapeno<br>
+                    </div>
+                    <div class="menu">
+                        <h3>Pick your cheese!:</h3>
+                            <input class="cheeses" type="radio" name="cheese" value="Regular">Regular<br>
+                            <input class="cheeses" type="radio" name="cheese" value="No Cheese">No Cheese<br>
+                            <input class="cheeses" type="radio" name="cheese" value="Extra Cheese">Extra Cheese<br>
+                    </div>
+                    <div class="menu">
+                            <h3>Choose your Pizza sauce!:</h3>
+                            <input class="sauces" type="radio" name="Sauce" value="Marinara Sauce">Marinara Sauce<br>
+                            <input class="sauces" type="radio" name="Sauce" value="White Sauce">White Sauce<br>
+                            <input class="sauces" type="radio" name="Sauce" value="Barbecue Sauce">Barbecue Sauce<br>
+                            <input class="sauces" type="radio" name="Sauce" value="No Sauce">No Sauce<br>
+                        </div>
+                    <div class="menu">
+                        <h3>Choose your Pizza crust!:</h3>
+                        <input class="crusts" type="radio" name="crust" value="Plain Crust">Plain Crust<br>
+                        <input class="crusts" type="radio" name="crust" value="Garlic Butter Crust">Garlic Butter Crust<br>
+                        <input class="crusts" type="radio" name="crust" value="Cheese Stuffed Crust">Cheese Stuffed Crust<br>
+                        <input class="crusts" type="radio" name="crust" value="Spicy Crust">Spicy Crust<br>
+                        <input class="crusts" type="radio" name="crust" value="House Special Crust">House Special Crust<br>
+                    </div>
+                    
+                    
+                    
+                
+                <br>
+                <div class="controls">
+                        <div class="button" onclick="getReceipt()">
+                            <p>Place Order</p>
+                        </div>
+                        <div class="button" onclick="clearAll()">
+                            <p>Cancel</p>
+                        </div>
+                    </div>
+                    <div id="cart">
+                        <div id="title1"><h3>You Ordered:</h3></div>
+                        <div id="title2"><h3>Subtotal:</h3></div>
+                        <div id="showText1"></div>
+                        <div id="showText2"></div>
+                        <div id="totalPrice1"><h3>Total Price:</h3></div>
+                        <div id="totalPrice2"></div>
+                    </div>
+
+            </div>
+        </div>
+			</form>
+         
+		              <!--/Menu-->
+		<script src="js/Pizza_project.js"></script>  
+          <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+	</body>
+</html>
